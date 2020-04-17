@@ -1,9 +1,10 @@
 
-  # hghj
-  ![GitHub repo size](https://img.shields.io/github/repo-size/vasavi245/undefined)
-  ![GitHub issues](https://img.shields.io/github/issues/vasavi245/undefined)
+  # Readme-Generator
+  ![npm](https://img.shields.io/npm/v/npm?color=green)
+  ![GitHub issues](https://img.shields.io/github/issues/vasavi245/week9_Readme_Generator)
   ## Description
-  jhkl
+  This is a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
+ node index.js
   ## Table of Contents
   1. [Installation](#Installation)
   2. [Usage](#Usage)
@@ -12,15 +13,20 @@
   5. [Tests](#Tests)
   6. [Questions](#Questions)
   ## Installation
-  yhgt
-  ## credits
-  uio
-  ## License
-  ![License](https://img.shields.io/github/license/vasavi245/hghj?style=flat-square)
+  To install necessary dependencies, run the following commands:
+ npm install
+ npm i axios
+ npm i util 
+  ## Usage
+  This application is used to generate readme for the projects, 
+add any screen shots of the running application
+
   ## Contributing
-  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
-  ## Tests
-  undefined
+  miniproject in UWA Coding Bootcamp
+  ## Tests  
+  run "npm test" to run tests
+  ## License
+  ![GitHub](https://img.shields.io/github/license/vasavi245/week9_Readme_Generator?style=plastic)
   ## Questions
-  null
-  ![Profile Image](https://avatars0.githubusercontent.com/u/58574509?v=4)
+  * <img src="https://avatars0.githubusercontent.com/u/58574509?v=4" alt="avatar" style="border-radius: 16px" width="150" />
+  If you have any questions about the repo, open an issue or contact [vasavi245](https://api.github.com/users/vasavi245) directly at r.vasavi04@gmail.com
