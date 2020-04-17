@@ -58,7 +58,6 @@ function promptUser() {
 function generateReadme(answers) {
     return `
   # ${answers.title}
-  ![npm](https://img.shields.io/npm/v/npm?color=green)
   ![GitHub issues](https://img.shields.io/github/issues/${answers.username}/${answers.repo})
   ## Description
   ${answers.description}
