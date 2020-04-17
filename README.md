@@ -3,6 +3,7 @@
   ## Description
   This is a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
  node index.js
+ ## Demo
   ## Table of Contents
   1. [Installation](#Installation)
   2. [Usage](#Usage)
