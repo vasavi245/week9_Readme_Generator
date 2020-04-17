@@ -2,9 +2,6 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
 const util = require("util");
-//const generate = require("./generateMarkdown");
-//const FileIO = require("./fileIO");
-//console.log(generate);
 const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
@@ -16,24 +13,44 @@ function promptUser() {
          message: "What is your Github username: ",
      },
      {
+         type: 'input',
+         name: 'email',
+         message: 'What is your email?',
+     },
+     {
+         type: 'input',
+         name: 'repo',
+         message: 'What is the name of your repository?',
+     },
+     {
          type: "input",
          name: "title",
          message: "What is the title of your project:", 
      },
      {
-         type: "input",
+         type: "editor",
          name: "description",
          message: "Description of your project:",
      },
      {
-         type: "input",
+         type: "editor",
          name: "installation",
          message: "Describe the Steps used to install your project? ",
      },
      {
-         type: "input",
-         name: "credits",
-         message: "List your collaborators with links to their github profiles",
+         type: 'editor',
+         name: 'usage',
+         message: 'Describe the usage of your application:'
+     },
+     {
+         type: 'editor',
+         name:  'contributing',
+         message: 'Any contributions you would like to add?',
+     },
+     {
+        type: 'input',
+        name: 'tests',
+        message: 'Any tests for this project?',
      },
 
 ])
@@ -41,8 +58,8 @@ function promptUser() {
 function generateReadme(answers) {
     return `
   # ${answers.title}
-  ![GitHub repo size](https://img.shields.io/github/repo-size/${answers.username}/${answers.repository})
-  ![GitHub issues](https://img.shields.io/github/issues/${answers.username}/${answers.repository})
+  ![npm](https://img.shields.io/npm/v/npm?color=green)
+  ![GitHub issues](https://img.shields.io/github/issues/${answers.username}/${answers.repo})
   ## Description
   ${answers.description}
   ## Table of Contents
@@ -53,27 +70,26 @@ function generateReadme(answers) {
   5. [Tests](#Tests)
   6. [Questions](#Questions)
   ## Installation
-  ${answers.installation}
-  ## credits
-  ${answers.credits}
-  ## License
-  ![License](https://img.shields.io/github/license/${answers.username}/${answers.title}?style=flat-square)
+  ${answers.installation} 
+  ## Usage
+  ${answers.usage}
   ## Contributing
-  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
-  ## Tests
+  ${answers.contributing}
+  ## Tests  
   ${answers.tests}
+  ## License
+  ![GitHub](https://img.shields.io/github/license/${answers.username}/${answers.repo}?style=plastic)
   ## Questions
-  ${answers.Email}
-  ![Profile Image](${answers.profileImage})`;
+  * <img src="${answers.Image}" alt="avatar" style="border-radius: 16px" width="150" />
+  If you have any questions about the repo, open an issue or contact [${answers.username}](https://api.github.com/users/${answers.username}) directly at ${answers.email}`;
   }
 //async function init to start and get answers from promptuser function
 async function init(){
-    console.log("hi");
     try {
         const answers = await promptUser();
         console.log(answers.username);
-        answers.profileImage = await getuserImage(answers.username);
-        answers.Email = await getuserEmail(answers.username);
+        answers.Image = await getuserImage(answers.username);
+        console.log(answers.email);
         const readme = generateReadme(answers)
         await writeFileAsync("ReadmeGenerated.md", readme);
     }catch(err){
@@ -96,18 +112,7 @@ async function getuserImage(username) {
         console.log(err);
     }
 }
-// async function to get email from the user
-async function getuserEmail(username) {
-    try{
-        const queryUrl2 = `https://api.github.com/users/${username}`;
-        const userEmail = await axios.get(queryUrl2);
-        console.log(userEmail.data.email);
-        return userEmail.data.email;
-    }catch(err) {
-        console.log(err);
-    }
-}
-    
+
 
 
 init();

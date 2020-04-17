@@ -1,31 +1,28 @@
 function generateReadme(answers) {
-    return `
-  # ${answers.title}
-  ![GitHub repo size](https://img.shields.io/github/repo-size/${answers.username}/${answers.repository})
-  ![GitHub issues](https://img.shields.io/github/issues/${answers.username}/${answers.repository})
-  ## Description
-  ${answers.description}
-  ## Table of Contents
-  1. [Installation](#Installation)
-  2. [Usage](#Usage)
-  3. [Licence](#License)
-  4. [Contributing](#Contributing)
-  5. [Tests](#Tests)
-  6. [Questions](#Questions)
-  ## Installation
-  ${answers.installation}
-  ## credits
-  ${answers.credits}
-  ## License
-  ![License](https://img.shields.io/github/license/${answers.username}/${answers.title}?style=flat-square)
-  ## Contributing
-  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
-  ## Tests
-  ${answers.tests}
-  ## Questions
-  ${answers.userEmail}
-  ![Profile Image](${answers.userImage})`;
-  }
-  
- // module.exports = generateReadme;
-  
+  return `
+# ${answers.title}
+![npm](https://img.shields.io/npm/v/npm?color=green)
+![GitHub issues](https://img.shields.io/github/issues/${answers.username}/${answers.repo})
+## Description
+${answers.description}
+## Table of Contents
+1. [Installation](#Installation)
+2. [Usage](#Usage)
+3. [Licence](#License)
+4. [Contributing](#Contributing)
+5. [Tests](#Tests)
+6. [Questions](#Questions)
+## Installation
+${answers.installation} 
+## Usage
+${answers.usage}
+## Contributing
+${answers.contributing}
+## Tests  
+${answers.tests}
+## License
+![GitHub](https://img.shields.io/github/license/${answers.username}/${answers.repo}?style=plastic)
+## Questions
+* <img src="${answers.Image}" alt="avatar" style="border-radius: 16px" width="150" />
+If you have any questions about the repo, open an issue or contact [${answers.username}](https://api.github.com/users/${answers.username}) directly at ${answers.email}`;
+}
