@@ -1,6 +1,5 @@
 
   # Readme-Generator
-  ![npm](https://img.shields.io/npm/v/npm?color=green)
   ![GitHub issues](https://img.shields.io/github/issues/vasavi245/week9_Readme_Generator)
   ## Description
   This is a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
