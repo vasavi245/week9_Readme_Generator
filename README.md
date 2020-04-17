@@ -4,7 +4,7 @@
   This is a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
  node index.js
  ## Demo
- ![Demo](readmeGenerator video.mp4)
+ ![readme gif](https://user-images.githubusercontent.com/58574509/79572596-ccd0da80-80ef-11ea-854f-4f6d25173f88.gif)
   ## Table of Contents
   1. [Installation](#Installation)
   2. [Usage](#Usage)
