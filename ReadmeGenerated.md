@@ -2,8 +2,9 @@
   # Readme-Generator
   ![GitHub issues](https://img.shields.io/github/issues/vasavi245/week9_Readme_Generator)
   ## Description
-  This is a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:
+  This is a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with   the following command:
  node index.js
+  ![image](https://user-images.githubusercontent.com/58574509/79559347-1e6d6b00-80d8-11ea-9c79-fdb589928868.png)
   ## Table of Contents
   1. [Installation](#Installation)
   2. [Usage](#Usage)
