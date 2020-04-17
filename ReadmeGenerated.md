@@ -14,17 +14,16 @@
   6. [Questions](#Questions)
   ## Installation
   To install necessary dependencies, run the following commands:
- npm install
- npm i axios
- npm i util 
+  * npm install
+  * npm i axios
+  * npm i util
+   
   ## Usage
-  This application is used to generate readme for the projects, 
-add any screen shots of the running application
-
+  This application is used to generate readme for the projects, add any screen shots of the running application
   ## Contributing
-  miniproject in UWA Coding Bootcamp
+  miniproject in UWA Coding Bootcamp 
   ## Tests  
-  run "npm test" to run tests
+  to run tests type "npm test" in command line
   ## License
   ![GitHub](https://img.shields.io/github/license/vasavi245/week9_Readme_Generator?style=plastic)
   ## Questions
